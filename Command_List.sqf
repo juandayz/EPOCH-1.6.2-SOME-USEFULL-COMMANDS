@@ -177,3 +177,47 @@ _local_variable = "hello";//colored msg
 player playActionNow "Medic";
 player playActionNow "GesturePoint";
 player playmove "ActsPercMstpSnonWpstDnon_suicide1B";//suicide animation
+////////////////////////////
+
+//get player animation
+_animState = animationState player;
+////get this animation in a text
+systemChat format["animation name is %1",_animState];
+/////////////////
+
+//time restriction
+_Time = time - lastuse;
+if(_Time < 60) exitWith {cutText [format["wait %1 seconds before play again!",(round(_Time - 60))], "PLAIN DOWN"];};
+lastuse = time;
+///////////////////////
+
+//remove maganizes from player inventory
+player removeMagazine "ItemclassNameHere";
+/////////
+
+//add magazines in players invetory
+player addMagazine "ItemClassNameHere";
+////////
+
+//Count ammount of one kind of item in player inventory
+_count_amount = {_x == "ItemClassNameHere"} count magazines player;
+if (_count_amount < 10) exitWith { systemChat "You need 10";};
+//////////////////////////
+
+//add backpack
+player addBackpack "BackpackClassName";
+////////////////
+
+//add weapon
+player addWeapon "ItemClassName";//used for tools and weapons.
+//////////////
+
+
+//remove all weapons,tools,backpacks from player inventory
+removeBackpack player;
+removeAllItems player;
+removeAllWeapons player;
+////////////////////////
+
+
+
