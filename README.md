@@ -1,1 +1,3 @@
 # EPOCH-1.6.2-SOME-USEFULL-COMMANDS
+
+PLEASE DONATE: https://github.com/juandayz/EPOCH-1.6.2-SOME-USEFULL-COMMANDS/blob/master/DONATION.md
